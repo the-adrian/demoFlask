@@ -1,0 +1,16 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Entrada Usuarios</title>
+</head>
+<body>
+<form   action="{{ url_for('login') }}" method="post">
+    <h1> Ingreso del sistema </h1>
+        <label>Usuario:</label> <input type="input" name="usuario" id="usuario">
+        <label>Password:</label> <input type="input" name="password" id="password">
+    <input type="submit" name="entrar" value="Entrar">
+</form>
+<h1>{{usuario}}</h1>
+<h2>{{error}}</h2>
+</body>
+</html>
