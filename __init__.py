@@ -1,4 +1,18 @@
 import flask
+from flask import Flask, request, session, g, redirect, url_for, abort, \
+     render_template, flash
+
+import os
+import sqlite3
+
+#----------- Configuracion de la base de datos ---------
+app.config.update(dic(
+    DATABASE = os.path.join(app.route_path, 'usuaios.db'),
+    DEBUG = True,
+    SECRET_KEY = 'development key',
+    USERNAME = 'admin',
+    PASSWORD = '123'
+))
 
 #------------vistas
 from class_login import Login
@@ -13,7 +27,7 @@ app.debug = True
 
 @app.route('/')
 def infoServer():
-  return 'Servidor Mageia con Flask Inicalizando...... <a href=\'/login/\'>login</a> <a href=\'/services/\'>Servicios</a>'
+  return render_template('login.html')
 
 #rutas para visualizacion del templantes
 app.add_url_rule('/login/', view_func=Login.as_view('login') , methods=['POST','GET'])

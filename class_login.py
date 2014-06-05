@@ -1,5 +1,6 @@
 import flask, flask.views
-from flask import request
+from flask import Flask, request, session, g, redirect, url_for, abort, \
+     render_template, flash
 
 class Login(flask.views.MethodView):
     def post(self):
@@ -11,10 +12,12 @@ class Login(flask.views.MethodView):
             password = request.form['password']
             if usuario == 'Adrian' and password == '123':
                 message = 'Welcome'
-                return flask.render_template('login.html', message = message)
+
+                return flask.render_template('servicios.html', message = usuario)
             else:
                 message = 'Access denied'
-                return flask.render_template('login.html',message = message)
+                #flash('probando flash')
+                return flask.render_template('login.html', message = message)
 
 
     def get(self):
