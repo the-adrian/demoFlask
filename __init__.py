@@ -1,11 +1,10 @@
 import flask
-from flaskext.mysql import MySQL
-
+from flask import render_template
 #------------vistas
 from class_login import Login
 from class_services import Services
 
-
+app = flask.Flask(__name__)
 #########inicializacion del servidor####################
 __SERVER__ = 'localhost'
 app.debug = True
