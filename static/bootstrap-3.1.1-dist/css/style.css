@@ -1,0 +1,80 @@
+#principal{
+       
+        margin: 30px;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        border:ridge 5px #35cbf0;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+}
+
+#col2{  
+        background-color: #FFFFFF;
+        text-align: center;
+        margin: 30px;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        border:ridge 5px #35cbf0;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+}
+
+#cabecera{
+
+        float: right;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        border:ridge 5px #35cbf0;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+}
+
+#salir{
+        float: right;
+        margin: 10px;
+        padding: 10px;
+
+}
+#salir:hover{
+font-size: 20px;
+color: red;
+
+}
+#pie{
+        float: center;
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid black;
+        border:ridge 5px #35cbf0;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+
+}
+
+#articulo{
+
+        float: center;
+}
+#articulo2{
+float:right;
+}
+
+input:hover{
+        
+      
+        border: 1px solid black;
+
+}
+img{
+position: auto;
+}

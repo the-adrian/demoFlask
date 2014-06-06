@@ -1,9 +1,14 @@
 <!DOCTYPE>
 <html>
 <head>
-    <title>Entrada Usuarios</title>
+    <title>login</title>
+  <link type="text/css" rel="stylesheet" href="../static/bootstrap-3.1.1-dist/css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="../static/bootstrap-3.1.1-dist/css/bootstrap.css"/>
+  
+   
 </head>
 <body>
+<<<<<<< HEAD
 <form   action="{{ url_for('login') }}" method="post">
     <h1> Ingreso del sistema {{message}} </h1>
         <label>Usuario:</label> <input type="input" name="usuario" id="usuario">
@@ -11,6 +16,42 @@
     <input type="submit" name="entrar" value="Entrar">
 </form>
 <h1>{{message}}</h1>
+=======
+    <div class="container-fluid" id="principal">
+        
+        <section class="row" id="form">
+            <section class="col-md-12" id="cabecera" >
+                    <img src="../static/ict.png" border="0" height="60" width="80"></img>
+                 <a href='' id="salir">salir</a>
+            </section>
+        </section>
+>>>>>>> 672f078941732ff74b86530d4cf4e09d7bb0d431
 
+        <section class="row" id="form">
+            <section class="col-md-12" id="uno">
+                <section class="col-md-4" id="col1">                  
+                </section>
+                <section class="col-md-4" id="col2">
+                    <form   action="{{ url_for('login') }}" method="post">
+                        <article id= "articulo1";>
+                    <h1 id ="encabezado" style="text-aling:center"> Ingreso del sistema </h1>
+                        </article>
+                        <article id ="articulo2">
+                    <label style="text-align:center">Usuario:</label> <input type="input" size="25" maxlength="50" name="usuario" id="usuario"><br>
+                    <label style="text-align:center">Password:</label> <input type="input" size="25" maxlength="50" name="password" id="password"><br>
+                    <input type="submit" name="entrar" value="Entrar">
+                        </article>
+                    </form>
+                </section>
+                <section class="col-md-4 id="col3>
+                </section>
+            </section>
+        </section>
+        <section class="row" id="form">
+            <section class="col-md-12" id="pie_pag">
+                <p id="pie">ICT CONSULTING</p>
+            </section>
+        </section>    
+    </div> 
 </body>
 </html>
