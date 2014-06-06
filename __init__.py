@@ -16,7 +16,7 @@ def infoServer():
 
 #rutas para visualizacion del templantes
 app.add_url_rule('/login/', view_func=Login.as_view('login') , methods=['POST','GET'])
-app.add_url_rule('/services/', view_func=Services.as_view('services'))
+app.add_url_rule('/services/', view_func=Services.as_view('services') , methods=['POST','GET'])
 
 ##########Inicializacion del servidor ##############################
 if __name__ == '__main__':

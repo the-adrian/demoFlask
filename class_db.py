@@ -10,7 +10,7 @@ app = flask.Flask(__name__)
 def database(query):
     app.config['MYSQL_DATABASE_USER'] = 'root'
     app.config['MYSQL_DATABASE_PASSWORD'] = ''
-    app.config['MYSQL_DATABASE_DB'] = 'USERS'
+    app.config['MYSQL_DATABASE_DB'] = 'bd_groupware'
     app.config['MYSQL_DATABASE_HOST'] = 'localhost'
     mysql.init_app(app)
     cursor = mysql.connect().cursor()
