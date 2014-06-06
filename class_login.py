@@ -15,7 +15,7 @@ class Login(flask.views.MethodView):
         if request.method == 'POST':
             usuario = request.form['usuario']
             password = request.form['password']
-            query = "SELECT * FROM jc_identificaciones where usuario_identificacion  = '"+usuario+"'"
+            query = "SELECT * FROM USUARIOS where Nombre  = '"+usuario+"'"
             data = class_db.database(query)
 
             if data is None:

@@ -4,7 +4,15 @@
     <title>Servicios</title>
 </head>
 <body>
-<h1>welcome {{message}}</h1>
+<h1>welcome</h1>
 <a href='/login/'><p>Salir</p></a>
+
+<ul>
+    {% for usuario in usuarios %}
+    <li>{{ usuario[0] }} {{ usuario[1] }}
+    {% endfor %}
+</ul>
+
+
 </body>
 </html>
