@@ -1,0 +1,35 @@
+#principal{
+	margin: 30px;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        border:ridge 5px #35cbf0;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+}
+#form{
+
+	border: 1px solid  black;
+	padding: 30px;
+	margin: 30px;
+	border-radius: 10px;
+    border:ridge 5px #35cbf0;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+     border-radius: 10px;
+}
+#uno{
+	   float: right;
+       
+    }
+
+ table{
+ 	margin: 10px;
+ 	padding: 10px;
+ }
+ th,tr{
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+ }
