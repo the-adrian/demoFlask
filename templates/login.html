@@ -23,16 +23,18 @@
                 <section class="col-md-4" id="col1">                  
                 </section>
                 <section class="col-md-4" id="col2">
-                    <form   action="{{ url_for('login') }}" method="post">
+
                         <article id= "articulo1";>
                     <h1 id ="encabezado" style="text-aling:center"> Ingreso del sistema </h1>
                         </article>
                         <article id ="articulo2">
+                    <form   action="{{ url_for('login') }}" method="post">
                     <label style="text-align:center">Usuario:</label> <input type="input" size="25" maxlength="50" name="usuario" id="usuario"><br>
                     <label style="text-align:center">Password:</label> <input type="password" size="25" maxlength="50" name="password" id="password"><br>
                     <input type="submit" name="entrar" value="Entrar">
-                        </article>
                     </form>
+                        </article>
+
                 </section>
                 <section class="col-md-4 id="col3>
                 </section>

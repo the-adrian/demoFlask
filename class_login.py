@@ -16,7 +16,7 @@ class Login(flask.views.MethodView):
             usuario = request.form['usuario']
             password = request.form['password']
             query = "SELECT * FROM USUARIOS where Nombre  = '"+usuario+"'"
-            data = class_db.database(query)
+            data = class_db.validar_usuario(query)
 
             if data is None:
                 return flask.redirect(flask.url_for('login'))
