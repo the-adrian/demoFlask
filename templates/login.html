@@ -1,49 +1,41 @@
 <!DOCTYPE>
 <html>
 <head>
-    <title>login</title>
-  <link type="text/css" rel="stylesheet" href="../static/bootstrap-3.1.1-dist/css/style.css"/>
-  <link href="../static/bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet" media="screen">
-  <script type="text/javascript" src="../static/bootstrap-3.1.1-dist/js/bootstrap.js"></script>
-  <link rel="shortcut icon" href="../static/favicon.ico"/>
-   
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<link type="text/css" rel="stylesheet" href="../static/bootstrap-3.1.1-dist/css/stylelog.css"/>
+<link href="../static/bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet" media="screen"/>
+<script type="text/javascript" src="../static/bootstrap-3.1.1-dist/js/bootstrap.js"></script>
+<link rel="shortcut icon" href="../static/favicon.ico"/>
+<style> 
+ html {
+    height:100%;
+    width:100%;
+    }
+body{
+    background:url('../static/bootstrap-3.1.1-dist/images/fondo.jpg')
+    no-repeat center center;
+    background-size:100% 100%;
+    }
+    </style>
 </head>
 <body>
-    <div class="container-fluid" id="principal">
-        
-        <section class="row" id="form">
-            <section class="col-md-12" id="cabecera" >
-                    <img src="../static/logoict.png" border="0" height="60" width="200"></img>
-            </section>
-        </section>
-
-        <section class="row" id="form">
-            <section class="col-md-12" id="uno">
-                <section class="col-md-4" id="col1">                  
-                </section>
-                <section class="col-md-4" id="col2">
-
-                        <article id= "articulo1";>
-                    <h1 id ="encabezado" style="text-aling:center"> Ingreso del sistema </h1>
-                        </article>
-                        <article id ="articulo2">
-                    <form   action="{{ url_for('login') }}" method="post">
-                    <label style="text-align:center">Usuario:</label> <input type="input" size="25" maxlength="50" name="usuario" id="usuario"><br>
-                    <label style="text-align:center">Password:</label> <input type="password" size="25" maxlength="50" name="password" id="password"><br>
-                    <input type="submit" name="entrar" value="Entrar">
-                    </form>
-                        </article>
-
-                </section>
-                <section class="col-md-4 id="col3>
-                </section>
-            </section>
-        </section>
-        <section class="row" id="form">
-            <section class="col-md-12" id="pie_pag">
-                <p id="pie">ICT CONSULTING</p>
-            </section>
-        </section>    
-    </div> 
+<div class="cuerpo">
+  		<form name="form" class="form" action="{{ url_for('login') }}" method="post">
+		    <div class="cabecera">
+    			<h1>Login</h1>
+    				<span>Dispensarios ICT Consulting</span>
+    		</div>
+			<div class="contenido">
+				<input name="usuario" type="text" class="input usuario" value="Usuario" onfocus="this.value=''" />
+    			<input name="password" type="password" class="input password" value="Password" onfocus="this.value=''" />
+    		</div>
+    		<div class="pie">
+    			<input type="submit" name="submit" value="Login" class="button" />
+		    </div>
+		</form>
+</div>
 </body>
 </html>
