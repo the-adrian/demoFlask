@@ -4,24 +4,57 @@
     <title>Servicios</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link type="text/css" rel="stylesheet" href="../static/bootstrap-3.1.1-dist/css/style2.css"/>
+  <link href="../static/bootstrap-3.1.1-dist/css/datetimepicker.css" rel="stylesheet" media="screen">
+  <script type="text/javascript" src="../static/bootstrap-3.1.1-dist/jquery/jquery.js"></script>
+  <script type="text/javascript" src="../static/bootstrap-3.1.1-dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="../static/bootstrap-3.1.1-dist/js/datetimepicker.js"></script>
+  <script src="../static/bootstrap-3.1.1-dist/js/widgetcalendario.js" type="text/javascript"></script>
+  <link type="text/css" rel="stylesheet" href="../static/bootstrap-3.1.1-dist/css/style2.css"/>
   <link href="../static/bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet" media="screen">
-  <script type="text/javascript" src="../static/bootstrap-3.1.1-dist/js/bootstrap.js"></script>
+ 
   
 </head>
 <body>
-	<div class="container-fluid" id="principal">
+  <div class="container-fluid" id="principal">
     <h1>welcome</h1>
         <section class="row" id="form">
             <section clas="col-md-12" id ="uno">
-            	<a href='/login/'><p>Salir</p></a>
+            	<a href='/login/'><p>Salir</p></a> 
             </section>
       	</section>
+
       	<section class="row" id ="form">
       		<section class="col-md-12" id="dos">
-      			<p><h4>Ingresa una peticion</h4></p><br>
-      			<input type="input" size="25" maxlength="50" name="usuario" id="usuario">
-        		<input type="submit" name="entrar" value="Enviar">
+      			<h3>Consulta</h3>
+            <form action="" class="form-horizontal"  role="form">
+              <fieldset>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Fecha de inicio</label>
+                    <div class="input-group date Wcalendar col-md-2" data-date-format="yyyy-mm-dd H:mm:ss P">
+                        <input class="form-control" size="16" type="text" value="" readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                </div>
+              </fieldset>
+            </form>
+
+            <form action="" class="form-horizontal"  role="form">
+              <fieldset>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Fecha final</label>
+                    <div class="input-group date Wcalendar col-md-2" data-date-format="yyyy-mm-dd H:mm:ss P">
+                        <input class="form-control" size="16" type="text" value="" readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                </div>
+              </fieldset>
+            </form>
+            <input type="submit" value="consultar">
+
+
+
       		</section>
       	</section>
       	<section class="row" id="form">
@@ -47,6 +80,6 @@
         </table>
       		</section>
       </section>
-     </div>
+    </div>
 </body>
 </html>

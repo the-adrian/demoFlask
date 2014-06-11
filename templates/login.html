@@ -20,17 +20,21 @@ body{
     background-size:100% 100%;
     }
     </style>
+
+    
+   </script>
 </head>
 <body>
 <div class="cuerpo">
   		<form name="form" class="form" action="{{ url_for('login') }}" method="post">
 		    <div class="cabecera">
-    			<h1>Login <img src="../static/bootstrap-3.1.1-dist/images/logoict.png"/></h1>
+    			<h1>Login </h1>
     				<span>Dispensarios ICT Consulting</span>
     		</div>
 			<div class="contenido">
-				<input name="usuario" type="text" class="input usuario" value="Usuario" onfocus="this.value=''" />
-    			<input name="password" type="password" class="input password" value="Password" onfocus="this.value=''" />
+				<input name="usuario" type="text" class="input usuario" value="Usuario" onfocus="this.value=''"/>
+    			<input name="password" type="password" class="input password" value="Password" onfocus="this.value=''"/>
+                
     		</div>
     		<div class="pie">
     			<input type="submit" name="submit" value="Login" class="button" />
