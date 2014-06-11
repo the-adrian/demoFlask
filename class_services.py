@@ -4,8 +4,8 @@ from class_lights import Ligths
 
 class Services(flask.views.MethodView):
     def get(self):
-        objLights = Ligths()
-        objLights.control()
+        #objLights = Ligths()
+        #objLights.control()
         return flask.render_template('servicios.html', usuarios = self.dameUsuarios())
 
     def dameUsuarios(self):
