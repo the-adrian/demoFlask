@@ -1,14 +1,15 @@
 import flask
-from flask import render_template
+from flask import render_template , session
 #------------vistas
 from class_login import Login
 from class_services import Services
-
+import os
 app = flask.Flask(__name__)
 #########inicializacion del servidor####################
 __SERVER__ = 'localhost'
 app.debug = True
 #fin de los parametros para la inicializacion del serviro
+app.secret_key = os.urandom(24)
 
 @app.route('/')
 def infoServer():
