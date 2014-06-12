@@ -16,10 +16,10 @@
 </head>
 <body>
   <div class="container-fluid" id="principal">
-    <h1>welcome</h1>
+    <h1>welcome {{nomUsuario}}</h1>
         <section class="row" id="form">
             <section clas="col-md-12" id ="uno">
-            	<a href='/login/'><p>Salir</p></a> 
+                <a href='/login/'><p>Salir</p></a>
             </section>
       	</section>
 
@@ -31,7 +31,7 @@
                 <div class="form-group">
                     <label class="col-md-2 control-label">Fecha de inicio</label>
                     <div class="input-group date Wcalendar col-md-2" data-date-format="yyyy-mm-dd H:mm:ss P">
-                        <input class="form-control" size="16" type="text" value="" readonly>
+                        <input name = "fechaInicio" class="form-control" size="16" type="text" value="" readonly>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                     </div>
@@ -44,7 +44,7 @@
                 <div class="form-group">
                     <label class="col-md-2 control-label">Fecha final</label>
                     <div class="input-group date Wcalendar col-md-2" data-date-format="yyyy-mm-dd H:mm:ss P">
-                        <input class="form-control" size="16" type="text" value="" readonly>
+                        <input name = "fechaFin" class="form-control" size="16" type="text" value="" readonly>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                     </div>
@@ -75,7 +75,7 @@
                 {% endfor %}
             </thead>
             <tbody>
-            
+
             </tbody>
         </table>
       		</section>

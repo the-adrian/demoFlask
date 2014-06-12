@@ -26,7 +26,6 @@ def validar_usuario(query):
         return data
 
 def consultar_usuarios(query):
-    #cursor = mysql.connect().cursor()
     cursor.execute(query)
     data = cursor.fetchall()
     return data

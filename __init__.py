@@ -13,7 +13,7 @@ app.secret_key = os.urandom(24)
 
 @app.route('/')
 def infoServer():
-  return render_template('login.html')
+    return render_template('login.html')
 
 #rutas para visualizacion del templantes
 app.add_url_rule('/login/', view_func=Login.as_view('login') , methods=['POST','GET'])
