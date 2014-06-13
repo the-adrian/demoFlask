@@ -1,15 +1,14 @@
 import flask, flask.views
 import class_db
 from class_lights import Ligths
-from flask import request, session
+from flask import request, session , render_template
 
 class Services(flask.views.MethodView):
     def get(self):
         #objLights = Ligths()
         #objLights.control()
-        logged_in = session['logged_in']
-        if logged_in:
-            return flask.redirect(flask.url_for('services'))
+        if session:
+            return render_template('servicios.html', nomUsuario=session['username'])
         else:
             return flask.redirect(flask.url_for('login'))
 

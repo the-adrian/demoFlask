@@ -10,14 +10,13 @@ __SERVER__ = 'localhost'
 app.debug = True
 #fin de los parametros para la inicializacion del serviro
 app.secret_key = os.urandom(24)
-
 @app.route('/')
 def infoServer():
     return render_template('login.html')
 
 @app.route('/logout')
 def logout():
-    session.pop('logged_in', None)
+    del session['username']
     return flask.redirect(flask.url_for('login'))
 
 #rutas para visualizacion del templantes

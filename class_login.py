@@ -22,7 +22,8 @@ class Login(flask.views.MethodView):
                 flash('Usuario o Password Incorrectos')
                 return flask.redirect(flask.url_for('login'))
             else:
-                session['logged_in'] = True
+                #session['logged_in'] = True
+                session['username'] = usuario
                 return flask.redirect(flask.url_for('services'))
 
 
