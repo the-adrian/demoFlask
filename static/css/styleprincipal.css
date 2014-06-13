@@ -33,7 +33,10 @@
         
 }
 
-a{
-        border: 1px solid black;
-        border-radius:10px; 
+p{
+        text-align: justify;
+}
+
+#fecha{
+    text-align: center;;
 }
