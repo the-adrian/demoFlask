@@ -1,10 +1,10 @@
 import flask, flask.views
 from flask import request, flash, session
 from flaskext.mysql import MySQL
-from class_services import Services
+
 import flask
 import class_db
-import class_services
+import class_home
 import os
 
 mysql = MySQL()
@@ -24,7 +24,7 @@ class Login(flask.views.MethodView):
             else:
                 #session['logged_in'] = True
                 session['username'] = usuario
-                return flask.redirect(flask.url_for('services'))
+                return flask.redirect(flask.url_for('home'))
 
 
 
