@@ -1,0 +1,38 @@
+#principal{
+	    margin: 30px !important;
+        padding: 20px !important;
+        border: 1px solid black !important;
+        border-radius: 10px !important;
+        border:ridge 5px #35cbf0 !important;
+        -moz-border-radius: 10px !important;
+        -webkit-border-radius: 10px !important;
+        border-radius: 10px;
+}
+#form{
+
+	border: 1px solid  black !important;
+	padding: 30px !important;
+	margin: 30px !important;
+	border-radius: 10px !important;
+    border:ridge 5px #35cbf0 !important;
+    -moz-border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+     border-radius: 10px !important;
+}
+#uno{
+	   float: right !important;
+       
+    }
+
+
+ #titulo{
+    border:1px solid black !important;
+    margin: 5px !important;
+    padding: 5px !important;
+ }
+
+ #tres{
+  
+    float: right !important;
+    margin: auto;
+ }
