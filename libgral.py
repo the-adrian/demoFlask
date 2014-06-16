@@ -14,3 +14,8 @@ def validatePath(strpath):
 		if err.errno == 13:
 			print >>sys.stderr, \
 				"Can't create log directory \"%s\", check permission" %(strpath)
+
+def separateDate(date):
+    return date.split(' ')
+
+

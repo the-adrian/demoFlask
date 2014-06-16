@@ -10,7 +10,7 @@ class Home(flask.views.MethodView):
         #objLights = Ligths()
         #objLights.control()
         if session:
-            return render_template('principal.html', nomUsuario=session['username'])
+            return render_template('home.html', nomUsuario=session['username'])
         else:
             return flask.redirect(flask.url_for('login'))
 
