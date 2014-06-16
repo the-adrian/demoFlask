@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Reportes</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<link type="text/css" rel="stylesheet" href="../static/css/styleprincipal.css"/>
+<link href="../static/css/bootstrap.css" rel="stylesheet" media="screen"/>
+<script type="text/javascript" src="../static//js/bootstrap.js"></script>
+<link rel="shortcut icon" href="../static/images/favicon.ico"/>
+<link href="../static/css/datetimepicker.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="../static/jquery/jquery.js"></script>
+<script type="text/javascript" src="../static/js/datetimepicker.js"></script>
+<script src="../static/js/widgetcalendario.js" type="text/javascript"></script>
+<link href="../static/css/datetimepicker.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="../static/jquery/jquery.js"></script>
+<script type="text/javascript" src="../static/js/bootstrap.js"></script>
+<script type="text/javascript" src="../static/js/datetimepicker.js"></script>
+<script src="../static/js/widgetcalendario.js" type="text/javascript"></script>
+
+</head>
+<body alink="center"><!--INICIA EL CUERPO DE LA PAGINA-->
+	
+		
+				<div class="col-md-12">
+				<div class="col-md-9" id="elemento">
+					<div class="col-md-12">
+						<strong><p style="font-size:20px;">La consulta se realizará en el intervalo seleccionado</p></strong>
+					</div>
+					<div class="col-md-6" id="calendarios">
+						<label class="col-md-4 control-label">Fecha inicio</label>
+                    <div class="input-group date Wcalendar col-md-8" data-date-format="dd/MM/yyyy hh:ii:ss" id="cal">
+                        <input name = "fechaInicio" class="form-control" size="16" type="text" value="" readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+					</div>
+					<div class="col-md-6" id="calendarios">
+						<label class="col-md-4 control-label">Fecha final</label>
+                    <div class="input-group date Wcalendar col-md-8" data-date-format="dd/MM/yyyy hh:ii:ss" id="cal">
+                        <input name = "fechaFin" class="form-control" size="16" type="text" value="" readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+					</div>
+
+					<div class="col-md-12">
+						<p style="text-align:center; padding:10px;">
+						<input type="button" value="Calcular" name="calcular"> 
+					</p>
+					</div>  
+				
+				</div>
+				
+		
+
+	</div>
+</body>
+</html>
