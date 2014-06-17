@@ -84,3 +84,12 @@ width: 100%;
 height: 100%;
 }
 
+#logo{
+    -moz-box-shadow: 3px 3px 4px #111;
+    -webkit-box-shadow: 3px 3px 4px #111;
+    box-shadow: 3px 3px 4px #111;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#111111')";
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#111111');
+}
