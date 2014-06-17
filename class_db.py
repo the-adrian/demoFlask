@@ -11,7 +11,7 @@ try:
     app = flask.Flask(__name__)
     app.config['MYSQL_DATABASE_USER'] = 'root'
     app.config['MYSQL_DATABASE_PASSWORD'] = ''
-    app.config['MYSQL_DATABASE_DB'] = 'USERS'
+    app.config['MYSQL_DATABASE_DB'] = 'Proyecto'
     app.config['MYSQL_DATABASE_HOST'] = 'localhost'
     mysql.init_app(app)
     cursor = mysql.connect().cursor()
@@ -25,10 +25,6 @@ def validar_usuario(query):
         data = cursor.fetchone()
         return data
 
-def consultar_usuarios(query):
-    cursor.execute(query)
-    data = cursor.fetchall()
-    return data
 
 
 

@@ -16,7 +16,7 @@ class Login(flask.views.MethodView):
         if request.method == 'POST':
             usuario = request.form['usuario']
             password = request.form['password']
-            query = "SELECT * FROM USUARIOS where Nombre  = '"+usuario+"' AND Password = '" + password +"'"
+            query = "SELECT * FROM USUARIOS WHERE Usuario  = '"+usuario+"' AND Password = '" + password +"'"
             data = class_db.validar_usuario(query)
             if data is None:
                 flash('Usuario o Password Incorrectos')
@@ -24,7 +24,7 @@ class Login(flask.views.MethodView):
             else:
                 #session['logged_in'] = True
                 session['username'] = usuario
-                return flask.redirect(flask.url_for('home'))
+                return flask.redirect(flask.url_for('reportes'))
 
 
 

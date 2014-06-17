@@ -28,44 +28,30 @@
 					<div class="col-md-12">
 						<strong><p style="font-size:20px;">La consulta se realizará en el intervalo seleccionado</p></strong>
 					</div>
-					<div class="col-md-6" id="calendarios">
-						<label class="col-md-4 control-label">Fecha inicio</label>
-                    <div class="input-group date col-md-8" data-date-format="dd/MM/yyyy    hh/ii:ss" id="cal">
-                        <input name = "fechaInicio" id="fechaInicio" class=" Wcalendar form-control" size="16" type="text" value="" readonly>
-                        
-                    </div>
-					</div>
-					<div class="col-md-6" id="calendarios">
-						<label class="col-md-4 control-label">Fecha final</label>
-                    <div class="input-group date col-md-8" data-date-format="dd/MM/yyyy    hh:ii:ss" id="cal">
-                        <input name = "fechaFin" id="fechaFin" class="Wcalendar form-control" size="16" type="text" value="" readonly>
-                        
-                    </div>
-					</div>
+                    <form name = "calendarios" action="{{ url_for('reportes') }}" method="post">
+                        <div class="col-md-6" id="calendario1">
+                            <label class="col-md-4 control-label">Fecha inicio</label>
+                        <div class="input-group date col-md-8" data-date-format="dd/MM/yyyy    hh/ii:ss" id="cal">
+                            <input name = "fechaInicio" id="fechaInicio" class=" Wcalendar form-control" size="16" type="text" value="" readonly>
 
-					<div class="col-md-12">
-						<p style="text-align:center; padding:10px;">
-						<input type="submit" value="Calcular" name="calcular"> 
-					</p>
-					</div>
+                        </div>
+                        </div>
+                        <div class="col-md-6" id="calendario2">
+                            <label class="col-md-4 control-label">Fecha final</label>
+                        <div class="input-group date col-md-8" data-date-format="dd/MM/yyyy    hh:ii:ss" id="cal">
+                            <input name = "fechaFin" id="fechaFin" class="Wcalendar form-control" size="16" type="text" value="" readonly>
+
+                        </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <p style="text-align:center; padding:10px;">
+                            <input type="submit" value="Calcular" name="calcular">
+                        </p>
+                        </div>
+                    </form>
   
-					<div>
-						<table border=1 width=300>
-								<td>uno
-									<td>1
-									</td>
-								</td>
-								<td>dos
-									<td>2
-									</td>
-								</td>
-								<td>tres
-									<td>3
-									</td>
-								</td>
-						</table>
-					</div>
-				
+					
 				</div>
 				
 		
