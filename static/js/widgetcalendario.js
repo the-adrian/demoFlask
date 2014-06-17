@@ -10,3 +10,11 @@ $('.Wcalendar').datetimepicker({
     showMeridian: 1
 });
 });
+
+
+/*$(function{
+$(".Wcalendar").focus(function({
+$("#fechaIncio").val("");
+});
+});*/
+
