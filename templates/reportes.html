@@ -30,13 +30,13 @@
                     <div class="col-md-6" id="calendario1">
                         <label class="col-md-4 control-label">Fecha inicio</label>
                         <div class="input-group date col-md-8" data-date-format="dd/MM/yyyy    hh/ii:ss" id="cal">
-                            <input name = "fechaInicio" id="fechaInicio" class=" Wcalendar form-control" size="16" type="text" value="" >
+                            <input name = "fechaInicio" id="fechaInicio" class=" Wcalendar form-control" size="16" type="text" value="" readonly>
                         </div>
                     </div>
                     <div class="col-md-6" id="calendario2">
                         <label class="col-md-4 control-label">Fecha final</label>
                         <div class="input-group date col-md-8" data-date-format="dd/MM/yyyy    hh:ii:ss" id="cal">
-                            <input name = "fechaFin" id="fechaFin" class="Wcalendar form-control" size="16" type="text" value="" >
+                            <input name = "fechaFin" id="fechaFin" class="Wcalendar form-control" size="16" type="text" value="" readonly>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -46,6 +46,40 @@
                     </div>
                 </form>
             </div>
+        </div>
+        <div class="col-md-12">
+
+            <style type="text/css">
+                .tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
+                .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
+                .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
+                .tg .tg-s6z2{text-align:center}
+                .tg .tg-zlxb{background-color:#ffffff;text-align:center}
+                .tg .tg-cxkv{background-color:#ffffff}
+                .tg .tg-24fa{background-color:#96fffb;text-align:center}
+                .tg .tg-dfh4{background-color:#96fffb}
+            </style>
+
+            <table class="tg">
+              <tr>
+                <th class="tg-s6z2"><br>Turno</th>
+                <th class="tg-031e">Fecha<br></th>
+                <th class="tg-031e">Hora<br></th>
+                <th class="tg-031e">No_Ticket</th>
+                <th class="tg-031e">Tarifa</th>
+                <th class="tg-031e">Total</th>
+              </tr>
+                {% for venta in tabla_ventas %}
+                  <tr>
+                    <td class="tg-s6z2">{{ tabla_ventas[1]}}</td>
+                    <td class="tg-031e">{{ tabla_ventas[2]}}</td>
+                    <td class="tg-031e">{{ tabla_ventas[3]}}</td>
+                    <td class="tg-031e">{{ tabla_ventas[4]}}</td>
+                    <td class="tg-031e">{{ tabla_ventas[5]}}</td>
+                    <td class="tg-031e">{{ tabla_ventas[6]}}</td>
+                  </tr>
+                {% endfor %}
+            </table>
         </div>
     </body>
 </html>
