@@ -307,12 +307,16 @@ figure {
 img {
   vertical-align: middle;
 }
+.img-responsive{
+  width: 100% !important;
+}
+
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  display: block;
+  margin-right: 0px;
   max-width: 100%;
   height: auto;
 }
@@ -734,10 +738,13 @@ pre code {
   overflow-y: scroll;
 }
 .container {
+  border-radius: 10px;
+  border: 2px solid #000;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  height: 925px;
 }
 @media (min-width: 768px) {
   .container {
@@ -5782,4 +5789,7 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+
+#logo{
+margin-right: 0px !important; 
+}

@@ -1,100 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="es"> 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-	<link type="text/css" rel="stylesheet" href="../static/css/styleprincipal.css"/>
-	<link href="../static/css/bootstrap.css" rel="stylesheet" media="screen"/>
-	<link rel="stylesheet" href="../static/css/bootstrap-responsive.css">
-	<script type="text/javascript" src="../static//js/bootstrap.js"></script>
-	<link rel="shortcut icon" href="../static/images/favicon.ico"/>
-
-
+	<meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Home</title>
+     <link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
+     <link rel="stylesheet" href="../static/css/bootstrap.css">
+     <link href="../static/css/datetimepicker.css" rel="stylesheet" media="screen">
+     <link rel="shortcut icon" href="../static/images/favicon.ico"/>
+     <script type="text/javascript" src="../static/js/jquery-1.11.1.min.js"></script>
+     <script type="text/javascript" src="../static/js/bootstrap.js"></script>
+     <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="../static/js/datetimepicker.js"></script>
+     <script type="text/javascript" src="../static/js/widgetcalendario.js"></script>    
 </head>
-<body alink="center"><!--INICIA EL CUERPO DE LA PAGINA-->
-	<div id="banner" class="container-fluid">
-		
-		<div class="container-fluid">
-			<div class="row" id ="cabecera">
-				<div class="col-md-12">
-					<div class="col-md-4" id="elemento">
-					 <p>3602 - SERVICIO SECA S.A. DE C.V.
-                     ADMINISTRADOR GENERAL DEL SISTEMA</p>
-					</div>
-					<div class="col-md-4" id="elemento">
-					
-					</div>
-					<div class="col-md-4" id="col4">
-						<div class="col-md-12" id="elemento"><p id ="salir">
-						<strong><a href="{{ url_for('home') }}">inicio</a> | <a href="{{ url_for('logout') }}">Salir</a></strong>
-						</p>
-						</div>
-						<div class="col-md-12" id="elemento">
-						<p>
-						<img src="../static/images/supramax.jpg"/ id="logo">
-						</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container-fluid">
-			<div class="row" id="menu">
-				<div class="col-md-12"id="elemento">
-					<nav id="navmenu">
-						<ul class="tabs">
-						<li class="active" style="cursor:pointer;"><div align="center"><strong><a href="#">Administracion</a></strong></div></li>
-						<li style="cursor:pointer;"><div align="center"><strong><a href="#">Reportes</a></strong></div></li>
-						<li style="cursor:pointer;"><div align="center"><strong><a href="#">Bitacora</a></strong></div></li>
-						<li style="cursor:pointer;"><div align="center"><strong><a href="#">Estado</a></strong></div></li>	
-						</ul>					 
-					</nav>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="container-fluid">
-			<div class="row" id ="contenido">
-				<div class="col-md-12">
-					<div class="col-md-9" id="elemento">
-						<div class='myIframe' > 
-							<iframe name="myFrame" frameborder='0'></iframe> 
-						</div>
-					
-						</div>
-					<div class="col-md-3" id="elemento1">
-						<p id = "fecha">
-							<strong>
-						<script type="text/javascript">
-							var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-							var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
-							var f=new Date(); document.write(diasSemana[f.getDay()] + " " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
-							</script>
-							</strong>
-					</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				</div>
-			</div>
-		</div>
-		</div>
-	</div>
+<body><!--INICIA EL CUERPO DE LA PAGINA-->
+	 <section class="container" id="principal">
+      <section class="row">
+        <section class="col-md-12">
+          <article class="col-md-6">
+            <p>3602 - SERVICIO SECA S.A. DE C.V.</p>
+            <p>ADMINISTRADOR GENERAL DEL SISTEMA</p>
+          </article>
+          <div class="col-md-6  text-right">           
+            <strong><a href="{{ url_for('home') }}" >inicio</a> | <a href="{{ url_for('logout') }}">Salir</a></strong>
+            <figure>
+              <img src="../static/images/supramax.jpg"/ class="img-responsive" alt="Responsive image" id="logo" >                          
+            </figure>         
+          </div> 
+        </section>     
+      </section>
+      <section id="menu">
+        <section class="row">
+          <section class="col-md-12">
+            <article class="tabbable">
+              <ul class="nav nav-pills">
+                <li><a href="#Administracion" data-toggle="tab">Administracion</a></li>
+                <li><a href="#Reportes" data-toggle="tab">Reportes</a></li>
+                <li><a href="#Estadodelsistema" data-toggle="tab">Estado del sistema</a></li>
+                <li><a href="#Bitacora" data-toggle="tab">Bitacora</a></li>                      
+              </ul>
+            </article>
+          </section>               
+        </section>
+      </section>
+      <section id="contenido">
+        <section class="row">
+          <section class="col-md-12">
+            <section class="col-md-9">
+              <section class="tab-content">
+                <article class="tab-pane active" id="Administracion"> 
+                  <h3>te encuentras en apartado Administracion</h3>
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam labore quam eius eos obcaecati, repellendus animi dignissimos voluptates modi officia autem commodi sit ab laborum loremquae vero vitae velit nisi?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, quia dolore repellat magnam blanditiis ad eum minima repellendus ut itaque incidunt, hic assumenda aperiam sed amet aut. Hic blanditiis, dignissimos!
+                  </p>
+                </article>
+                <article class="tab-pane" id="Reportes">    
+                  <h3>te encuentras en apartado Reportes</h3>
+                    <form class="form-group" name = "calendarios" action="{{ url_for('reportes') }}" method="post">
+                      <article class="col-md-12">
+                        <article class="col-md-6" id="calendario1">
+                          <label class="col-md-6 control-label center-bock">Fecha inicio</label>
+                          <article class="input-group date col-md-6 center-bock" data-date-format="dd/MM/yyyy    hh/ii:ss" id="cal">
+                            <input name = "fechaInicio" id="fechaInicio" class=" Wcalendar form-control" size="16" type="text" value="" readonly>
+                          </article>
+                        </article>
+                        <article class="col-md-6" id="calendario2">
+                          <label class="col-md-6 control-label center-bock">Fecha final</label>
+                          <article class="input-group date col-md-6  center-bock" data-date-format="dd/MM/yyyy    hh:ii:ss" id="cal">
+                            <input name = "fechaFin" id="fechaFin" class="Wcalendar form-control" size="16" type="text" value="" readonly>
+                          </article>
+                        </article>
+                      </article>                                                   
+                    </form>
+                </article>
+                <article class="tab-pane" id="Estadodelsistema">      
+                  <h3>te encuentras en apartado Estado del sistema</h3>
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aliquid repellat architecto voluptatibus corporis a reiciendis cum cupiditate excepturi ab. Modi eaque ipsum iusto lorempariatur repudiandae necessitatibus autem dolorem ipsam.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nesciunt dolores laboriosam assumenda doloremque, nobis architecto eius, delectus amet consequuntur quia consectetur. Accusantium atque, harum nisi. Hic reiciendis vero excepturi.
+                  </p>
+                </article>
+                <article class="tab-pane" id="Bitacora">    
+                  <h3>te encuentras en apartado Bitacora</h3>
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus autem ratione non quam, quibusdam, magni quod suscipit libero delectus commodi expedita temporibus quasi reiciendis.lorem Voluptates similique, distinctio aut voluptate veniam.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque veniam rerum ea consectetur magni dolore illo expedita excepturi, laboriosam quidem quasi aliquid facilis et, alias nostrum, dolorum reprehenderit. Doloremque, ipsa?
+                  </p>
+                </article>
+              </section>              
+            </section>
+            <section class="col-md-3 text-center">
+              <p id = "fecha" style="margin-top: 20px;">
+                <strong>
+                  <script type="text/javascript">
+                    var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                    var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+                    var f=new Date(); document.write(diasSemana[f.getDay()] + " " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+                  </script>
+                </strong>
+              </p>
+            </section>
+          </section>  
+        </section>
+      </section>
+     </section>
 </body><!--CIERRE DEL CUERPO DE LA PAGINA-->
 </html>
