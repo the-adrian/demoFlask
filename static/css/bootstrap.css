@@ -740,13 +740,13 @@ pre code {
 .container {
   border-radius: 10px;
   box-shadow: 0px 0px 20px #000000;
-  border: 2px solid #000;
   padding-right: 15px;
   padding-left: 15px;
   margin-top: 3%;
+  margin-bottom: 3%;
   margin-right: auto;
   margin-left: auto;
-  height: 900px;
+  height: 700px;
 }
 @media (min-width: 768px) {
   .container {
@@ -3468,7 +3468,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 1px 10px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -5792,6 +5792,40 @@ button.close {
   }
 }
 
-#logo{
-margin-right: 0px !important; 
-}
+
+
+
+/*Estos son mis estilos incorporados*/
+ #logo{
+  box-shadow: 3px 3px 3px #999;
+  width: 250px !important;
+  height: 50px;
+ }
+
+ #cabecera{
+  padding-top: 10px;
+  padding-bottom: 10px;
+ }
+
+ #menu{
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+ }
+
+ #apContenido{
+   margin-top: 20px;
+   border-left: 2px solid black;
+ }
+ #calcular{
+  text-align: center;
+ }
+
+ #calcular #btncalcular{
+  text-align: center;
+  margin:15px;
+ }
+
+ #calcular #btncalcular table{
+  text-align: center;
+  margin:15px;
+ }

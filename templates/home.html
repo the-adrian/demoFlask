@@ -12,12 +12,13 @@
      <script type="text/javascript" src="../static/js/bootstrap.js"></script>
      <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
      <script type="text/javascript" src="../static/js/datetimepicker.js"></script>
-     <script type="text/javascript" src="../static/js/widgetcalendario.js"></script>    
+     <script type="text/javascript" src="../static/js/widgetcalendario.js"></script>
+     <script type="text/javascript" src="../static/jquery/jquery.kernotek.js"></script>
 </head>
 <body><!--INICIA EL CUERPO DE LA PAGINA-->
 	 <section class="container" id="principal">
       <section class="row">
-        <section class="col-md-12">
+        <section class="col-md-12" id="cabecera">
           <article class="col-md-6">
             <p>3602 - SERVICIO SECA S.A. DE C.V.</p>
             <p>ADMINISTRADOR GENERAL DEL SISTEMA</p>
@@ -56,28 +57,30 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, quia dolore repellat magnam blanditiis ad eum minima repellendus ut itaque incidunt, hic assumenda aperiam sed amet aut. Hic blanditiis, dignissimos!
                   </p>
                 </article>
-                <article class="tab-pane" id="Reportes">    
-                  <h3>Consulta</h3>
-                  <span>La consulta se realizará en el intervalo indicado</span>
-                    <form class="form-group" name = "calendarios" action="{{ url_for('reportes') }}" method="post">
-                      <article class="col-md-12">
-                        <article class="col-md-6" id="calendario1">
-                          <label class="col-md-6 control-label center-bock">Fecha inicio</label>
-                          <article class="input-group date col-md-6 center-bock" data-date-format="dd/MM/yyyy    hh/ii:ss" id="cal">
-                            <input name = "fechaInicio" id="fechaInicio" class=" Wcalendar form-control" size="16" type="text" value="" readonly>
-                          </article>
-                        </article>
-                        <article class="col-md-6" id="calendario2">
-                          <label class="col-md-6 control-label center-bock">Fecha final</label>
-                          <article class="input-group date col-md-6  center-bock" data-date-format="dd/MM/yyyy    hh:ii:ss" id="cal">
-                            <input name = "fechaFin" id="fechaFin" class="Wcalendar form-control" size="16" type="text" value="" readonly>
-                          </article>
-                        </article>
-                      </article>                                                   
-                    </form>
+                <article class="tab-pane" id="Reportes">
+                  <article class="row">
                     <article class="col-md-12">
-                      <buton class="submint"></buton>
+                      <h3>Consulta</h3>
+                      <span>La consulta se realizará en el intervalo indicado</span>
                     </article>
+                    <article class="col-md-12">
+                      <article class="col-md-6" id="calendario1">
+                        <label class="col-md-12 control-label ">Fecha inicio</label>
+                        <article class="input-group date col-md-12 " data-date-format="dd/MM/yyyy    hh/ii:ss" id="cal">
+                          <input name = "fechaInicio" id="fechaInicio" class=" Wcalendar form-control" size="16" type="text" value="" readonly>
+                        </article>
+                      </article>
+                      <article class="col-md-6" id="calendario2">
+                        <label class="col-md-12 control-label ">Fecha final</label>
+                          <article class="input-group date col-md-12 " data-date-format="dd/MM/yyyy    hh:ii:ss" id="cal">
+                            <input name = "fechaFin" id="fechaFin" class="Wcalendar form-control" size="16" type="text" value="" readonly >
+                          </article>
+                      </article>
+                    </article>
+                    <article class="col-md-12" id="calcular">
+                      <input type="submit" class="btn btn-grup btn-primary "value="calcular" id="btncalcular"/>                        
+                    </article>
+                  </article>
                 </article>
                 <article class="tab-pane" id="Estadodelsistema">      
                   <h3>te encuentras en apartado Estado del sistema</h3>
@@ -95,8 +98,8 @@
                 </article>
               </section>              
             </section>
-            <section class="col-md-3 text-center">
-              <p id = "fecha" style="margin-top: 20px;">
+            <section class="col-md-3 text-center" id="apContenido">
+              <p id = "fecha">
                 <strong>
                   <script type="text/javascript">
                     var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
@@ -104,6 +107,9 @@
                     var f=new Date(); document.write(diasSemana[f.getDay()] + " " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
                   </script>
                 </strong>
+              </p>
+              <p class="text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dicta blanditiis totam repudiandae nihil. In perspiciatis quaerat libero culpa voluptatum dicta accusamus recusandae, necessitatibus autem, deleniti, excepturi fugit, dolorum beatae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, perspiciatis excepturi impedit accusamus sed quam, nisi placeat praesentium quod tempora id dolor nobis, odio quis voluptatem harum veniam similiquelorem  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa laudantium, ab totam voluptatibus incidunt distinctio tenetur qui quia velit, ducimus magni eligendi provident, pariatur fuga. Aperiam, sunt non. Reprehenderit, consequuntur!
               </p>
             </section>
           </section>  
