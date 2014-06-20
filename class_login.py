@@ -24,7 +24,7 @@ class Login(flask.views.MethodView):
             else:
                 #session['logged_in'] = True
                 session['username'] = usuario
-                return flask.redirect(flask.url_for('reportes'))
+                return flask.redirect(flask.url_for('home'))
 
 
 
