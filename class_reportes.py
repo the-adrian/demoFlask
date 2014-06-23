@@ -13,6 +13,8 @@ class Reportes(flask.views.MethodView):
             msg = True
             return render_template('home.html', msg = msg)
         else:
+            #for venta in tabla_ventas:
+
             return render_template('home.html',tabla_ventas = tabla_ventas, fechaFin = fechaFin, fechaInicio = fechaInicio)
     def get(self):
         return render_template('home.html')
