@@ -1426,12 +1426,19 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 2px;
+  padding-left: 2px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 2px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
 .table > thead > tr > th {
+  padding-left: 2px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 2px;
   vertical-align: bottom;
   border-bottom: 2px solid #ddd;
 }
@@ -1455,7 +1462,10 @@ th {
 .table-condensed > thead > tr > td,
 .table-condensed > tbody > tr > td,
 .table-condensed > tfoot > tr > td {
-  padding: 2px;
+  padding-left: 2px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 2px;;
 }
 .table-bordered {
   border: 1px solid #ddd;
@@ -5878,3 +5888,6 @@ button.close {
   text-align: center;
   margin:15px;
  }
+thead > tr > td{
+  font-weight: bold; 
+}
