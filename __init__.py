@@ -17,7 +17,7 @@ def infoServer():
 
 @app.route('/logout')
 def logout():
-    del session['username']
+    session.clear()
     return flask.redirect(flask.url_for('login'))
 
 #rutas para visualizacion del templantes

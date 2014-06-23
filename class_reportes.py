@@ -17,3 +17,11 @@ class Reportes(flask.views.MethodView):
     def get(self):
         return render_template('home.html')
 
+
+##### Notas
+"""
+para ver el numero de serie
+
+  <!--{% set Num_Serie = tabla_ventas[0] %}<p>Número de Serie: <strong> {{ Num_Serie[12:] }} </strong></p>-->
+"""
+
