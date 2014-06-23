@@ -61,6 +61,7 @@
             </style>
 
             <table class="tg">
+	     <thead>
               <tr>
                 <th class="tg-s6z2"><br>Turno</th>
                 <th class="tg-031e">Fecha<br></th>
@@ -69,6 +70,11 @@
                 <th class="tg-031e">Tarifa</th>
                 <th class="tg-031e">Total</th>
               </tr>
+            </thead>
+            <tbody>
+    {{ la variable que envias en el controlador }}
+
+            </tbody>
                 {% for venta in tabla_ventas %}
                   <tr>
                     <td class="tg-s6z2">{{ tabla_ventas[1]}}</td>

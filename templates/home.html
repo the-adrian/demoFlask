@@ -98,34 +98,9 @@
                               <td>Tarifa</td>
                               <td>Total</td>
                             </tr>
-                          </thead>
+                          </thead>codigo
                           <tbody>
-                            {% set color_tabla =  True %}
-                            {% for venta in tabla_ventas %}
-                                {% if color_tabla %}
-                                  <tr class="active">
-                                    <td>{{ tabla_ventas[1] }}</td>
-                                    <td>{{ tabla_ventas[2] }}</td>
-                                    <td>{{ tabla_ventas[3] }}</td>
-                                    <td>{{ tabla_ventas[4] }}</td>
-                                    <td>{{ tabla_ventas[5] }}</td>
-                                    <td>{{ tabla_ventas[6] }}</td>
-                                    <td>{{ tabla_ventas[7] }}</td>
-                                  </tr>
-                                  {% set color_tabla = False %}
-                                {% else %}
-                                  <tr>
-                                    <td>{{ tabla_ventas[1] }}</td>
-                                    <td>{{ tabla_ventas[2] }}</td>
-                                    <td>{{ tabla_ventas[3] }}</td>
-                                    <td>{{ tabla_ventas[4] }}</td>
-                                    <td>{{ tabla_ventas[5] }}</td>
-                                    <td>{{ tabla_ventas[6] }}</td>
-                                    <td>{{ tabla_ventas[7] }}</td>
-                                  </tr>
-                                  {% set color_tabla = True %}
-                                {% endif %}
-                            {% endfor %}
+                            {{ codigo_tabla }}
                           </tbody>
                         </table>
                       </div>
