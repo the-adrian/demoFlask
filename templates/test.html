@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es"> 
 <head>
-  <meta charset="UTF-8">
+	<meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Home</title>
-     <link href="../static/css/bootstrap.css" rel="stylesheet">
+     <link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
      <link href="../static/css/datetimepicker.css" rel="stylesheet" media="screen">
+     <link href="../static/css/bootstrap.css" rel="stylesheet">
      <link rel="shortcut icon" href="../static/images/favicon.ico"/>
      <script type="text/javascript" src="../static/js/jquery-1.11.1.min.js"></script>
      <script type="text/javascript" src="../static/js/bootstrap.js"></script>
@@ -15,8 +16,8 @@
      <script type="text/javascript" src="../static/jquery/jquery.kernotek.js"></script>
 </head>
 <body><!--INICIA EL CUERPO DE LA PAGINA-->
-   <section class="container" id="principal">
-      <section class="row">
+	 <section class="container-fluid" id="principal">
+      <section class="row-fluid">
         <section class="col-md-12" id="cabecera">
           <article class="col-md-6">
             <p>3602 - SERVICIO SECA S.A. DE C.V.</p>
@@ -31,7 +32,7 @@
         </section>     
       </section>
       <section id="menu">
-        <section class="row">
+        <section class="row-fluid">
           <section class="col-md-12">
             <article class="tabbable">
               <ul class="nav nav-pills">
@@ -44,8 +45,8 @@
           </section>               
         </section>
       </section>
-      <section id="container">
-        <section class="row">
+      <section id="contenido">
+        <section class="row-fluid">
           <section class="col-md-12">
             <section class="col-md-9">
               <section class="tab-content">
@@ -57,7 +58,7 @@
                   </p>
                 </article>
                 <article class="tab-pane" id="Reportes">
-                  <article class="row">
+                  <article class="row-fluid">
                     <article class="col-md-12">
                       <h3>Consulta</h3>
                       <span>La consulta se realizará en el intervalo indicado</span>
@@ -78,22 +79,25 @@
                     </article>
                     <article class="col-md-12" id="calcular">
                       <input type="submit" class="btn btn-grup btn-primary "value="calcular" id="btncalcular"/>
-                    
-                    <div class="table-responsive">
-                      <table class="table table-condensed table-hover table-bordered">
+                    </article>
+                    <div class="container-fluid">
+                      <table class="table table-condensed">
                         <thead>
                           <tr>
-                            <td>Id_Venta</td>
-                            <td>No_Serie</td>
-                            <td>Turno</td>
-                            <td>Fecha</td>
-                            <td>Hora</td>
-                            <td>Ticket</td>
-                            <td>No_Detalle</td>
-                            <td>Tarifa</td>
-                            <td>Multiplicador</td>
-                            <td>Total</td>
-                            <td>Deposito</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
                           </tr>
                         </thead>
                         <tbody>
@@ -109,11 +113,13 @@
                             <td>campo1</td>
                             <td>campo1</td>
                             <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
+                            <td>campo1</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
-                    </article>
                   </article>
                 </article>
                 <article class="tab-pane" id="Estadodelsistema">      
