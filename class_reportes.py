@@ -19,7 +19,7 @@ class Reportes(flask.views.MethodView):
                 for venta in ventas:
                     codigo_tabla += str("<td>")+ str(venta) + str("</td>")
                 str("</tr>")
-            return render_template('home.html',codigo_tabla = codigo_tabla, Num_serie = class_db.Num_serie(), fechaFin = fechaFin, fechaInicio = fechaInicio)
+            return render_template('home.html',codigo_tabla = codigo_tabla, Num_serie = class_db.Num_serie(), fechaFin = fechaFin, fechaInicio = fechaInicio , capa="Reportes")
     def get(self):
         return render_template('home.html')
 

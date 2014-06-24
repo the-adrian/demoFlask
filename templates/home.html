@@ -13,9 +13,12 @@
      <script type="text/javascript" src="../static/js/datetimepicker.js"></script>
      <script type="text/javascript" src="../static/js/widgetcalendario.js"></script>
      <script type="text/javascript" src="../static/jquery/jquery.kernotek.js"></script>
+     <script type="text/javascript">
+
+     </script>
 </head>
-<body><!--INICIA EL CUERPO DE LA PAGINA-->
-   <section class="container" id="principal">
+<body onload="visualizacionCapas('{{capa}}')"><!--INICIA EL CUERPO DE LA PAGINA-->
+   <section class="container-fluid" id="principal">
       <section class="row">
         <section class="col-md-12" id="cabecera">
           <article class="col-md-6">
@@ -49,7 +52,7 @@
           <section class="col-md-12">
             <section class="col-md-9">
               <section class="tab-content">
-                <article class="tab-pane active" id="Administracion"> 
+                <article class="tab-pane" id="Administracion"> 
                   <h3>te encuentras en apartado Administracion</h3>
                   <p class="text-justify">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam labore quam eius eos obcaecati, repellendus animi dignissimos voluptates modi officia autem commodi sit ab laborum loremquae vero vitae velit nisi?
