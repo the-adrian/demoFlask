@@ -27,6 +27,12 @@ def validar_usuario(query):
         data = cursor.fetchone()
         return data
 
+def Num_serie():
+    query = "SELECT No_Serie FROM Tabla_Ventas"
+    cursor.execute(query)
+    data = cursor.fetchone()
+    return data
+
 def consultar_ventas(dateStart, dateEnd):
     # 2014/06/13 11:46:25
     # 2014/06/13 14:05:37
@@ -37,7 +43,7 @@ def consultar_ventas(dateStart, dateEnd):
         dateStart = libgral.separateDate(dateStart)
         dateEnd = libgral.separateDate(dateEnd)
 
-        query = "SELECT No_Serie, Ticket, Turno, Fecha, Hora, No_Detalle, Tarifa, Total FROM Tabla_Ventas " \
+        query = "SELECT Ticket, Turno, Fecha, Hora, No_Detalle, Tarifa, Total FROM Tabla_Ventas " \
                 "WHERE Fecha BETWEEN STR_TO_DATE('2014/06/13', '%Y/%m/%d') AND STR_TO_DATE('2014/06/13','%Y/%m/%d') " \
                 "AND Hora BETWEEN TIME_FORMAT('11:46:25','%T') AND TIME_FORMAT('14:05:37','%T');"
         """
@@ -46,8 +52,12 @@ def consultar_ventas(dateStart, dateEnd):
                 "AND Hora BETWEEN TIME_FORMAT('"+dateStart[1]+"','%T') AND TIME_FORMAT('"+dateEnd[1]+"','%T');"
         """
         cursor.execute(query)
-        data = cursor.fetchone()
+        data = cursor.fetchall()
         return data
+def consulta_genera():
+    query = ""
+    cursor.execute(query)
+    data =  cursor.fetchall()
 
 
 

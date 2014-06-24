@@ -14,13 +14,12 @@ class Reportes(flask.views.MethodView):
             msg = True
             return render_template('home.html', msg = msg)
         else:
-            for venta in tabla_ventas:
+            for ventas in tabla_ventas:
                 codigo_tabla += str('<tr class="active">')
-                for indice in range(num_col):
-                    codigo_tabla += str("<td>")+ str(tabla_ventas[indice + 1]) + str("</td>")
-
+                for venta in ventas:
+                    codigo_tabla += str("<td>")+ str(venta) + str("</td>")
                 str("</tr>")
-            return render_template('home.html',codigo_tabla = codigo_tabla, fechaFin = fechaFin, fechaInicio = fechaInicio)
+            return render_template('home.html',codigo_tabla = codigo_tabla, Num_serie = class_db.Num_serie(), fechaFin = fechaFin, fechaInicio = fechaInicio)
     def get(self):
         return render_template('home.html')
 

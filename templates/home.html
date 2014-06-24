@@ -85,7 +85,8 @@
                     {% if not msg %}
 
                       <div class="table-responsive">
-                          <p>Reporte del día <strong>{{ fechaInicio }}</strong>, al <strong>{{  fechaFin  }}</strong></p>
+                        <p>Número de Serie: <strong>{{ Num_serie[0] }}</strong></p>
+                        <p>Reporte del día <strong>{{ fechaInicio }}</strong>, al <strong>{{  fechaFin  }}</strong></p>
                         <table class="table table-condensed table-hover table-bordered">
                           <thead class="bg-primary">
                             <tr>
@@ -98,9 +99,9 @@
                               <td>Tarifa</td>
                               <td>Total</td>
                             </tr>
-                          </thead>codigo
+                          </thead>
                           <tbody>
-                            {{ codigo_tabla }}
+                             {{ codigo_tabla|safe }}
                           </tbody>
                         </table>
                       </div>
