@@ -1,10 +1,7 @@
 #-*- coding: utf-8 -*-
-from os import sysconf
-
 __author__ = 'aramirez'
-
 import sys
-import MySQLdb
+import class_db
 import datetime
 
 """
@@ -13,10 +10,10 @@ import datetime
 
 values=[]
 check_sum = 0
-#trama = sys.argv[1]
-def main():
+trama = sys.argv[1]
+def main(trama):
     check_sum_cal = 0
-    trama = '\x02AC10TX1241213172|1|2014-02-03|18:02:00|299|0|3.00|1|3.00|10.00|M,10.00,1|M,2.0,1;M,5.0,1|1554\x03'
+    #trama = '\x02AC10TX1241213172|1|2014-02-03|18:02:00|299|0|3.00|1|3.00|10.00|M,10.00,1|M,2.0,1;M,5.0,1|1554\x03'
     if trama.find('\x02') != 0 or trama.find('\x03') != len(trama) - 1:
         print "error con el inicio y fin de cadena"
     else:
@@ -71,13 +68,6 @@ def main():
             print query4
             separate_deposit(ingreso)
 
-def checksum_calc(str):
-    response = 0
-    for letra in str:
-        response += ord(letra)
-    return response
-
-
 def separate_deposit(deposit):
     deposit = deposit.split(';')
     for elements in deposit:
@@ -96,4 +86,4 @@ def separate_deposit(deposit):
 
 
 if __name__ == '__main__':
-    main()
+    main(trama)
