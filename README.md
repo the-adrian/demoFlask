@@ -1,4 +1,6 @@
 demoFlask
-=========
 
-ejemplos de como trabajar con el microframework de flask
+=========
+@AUTOR Jesús Adrián Ramírez López 
+@EMAIL jadrianramirezl@gmail.com
+=========
